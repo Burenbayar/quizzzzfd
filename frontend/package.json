@@ -1,4 +1,7 @@
 {
+  "routes": [
+    { "src": "/(.*)", "dest": "/" }
+  ],
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
@@ -27,3 +30,5 @@
     "vite": "^7.2.4"
   }
 }
+
+  
