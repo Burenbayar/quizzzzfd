@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/HeroSection";
 import QuizPage from "./components/QuizPage";
-import Teams from "./components/Team";
 import ProfilePage from "./components/ProfilePage";
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/teams" element={<Teams />} />
           <Route path="/quiz" element={<QuizPage />} />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>

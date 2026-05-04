@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL;
+
 
 export default function Header() {
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ export default function Header() {
     setAuthLoading(true);
 
     try {
-      const res = await fetch(`${API_BASE}/login`, {
+      const res = await fetch(`${API_BASE}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -109,7 +110,7 @@ export default function Header() {
     setAuthLoading(true);
 
     try {
-      const res = await fetch(`${API_BASE}/register`, {
+      const res = await fetch(`${API_BASE}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -173,14 +174,7 @@ export default function Header() {
                 Нүүр
               </button>
             </li>
-            <li>
-              <button
-                className="nav-btn"
-                onClick={() => handleNavClick("/teams")}
-              >
-                Манай баг
-              </button>
-            </li>
+
             <li>
               <button
                 className="nav-btn quiz-btn"

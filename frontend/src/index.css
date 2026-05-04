@@ -1455,3 +1455,218 @@ body {
     font-size: 2.6rem;
   }
 }
+/* ==============================
+   iPhone 13 / жижиг утас fine-tune
+   (өргөн ≤ 430px)
+   ============================== */
+@media (max-width: 430px) {
+
+  /* Ерөнхий layout – хажуу padding, margin-уудыг багасгана */
+  body {
+    padding-left: 0;
+  }
+
+  .main-wrapper {
+    margin-right: 0;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  /* Header – бага зай эзэлдэг, шахуу */
+  .header {
+    padding: 10px 12px;
+  }
+
+  .nav-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  /* Burger dropdown илүү амьсгалтай */
+  .nav-wrapper {
+    top: 54px;
+    padding: 8px 14px 12px;
+  }
+
+  .nav-list {
+    gap: 6px;
+  }
+
+  /* Auth тал – жаахан жижигрүүлнэ */
+  .login-btn,
+  .signup-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .avatar-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* Logout icon (жижиг дэлгэц) бага зэрэг жижгэрнэ */
+  .logout-btn-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  /* Hero хэсэг – нэг багана, padding багасгана */
+  .container.hero {
+    padding: 70px 14px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .content-side {
+    padding-right: 0;
+  }
+
+  .content-side h1 {
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .content-side p {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-meta {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .image-side {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-height: 260px;
+  }
+
+  /* Team page – том гарчиг, зайг багасгана */
+  .team-section {
+    padding: 50px 14px;
+  }
+
+  .team-title {
+    font-size: 24px;
+  }
+
+  .team-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .team-grid {
+    gap: 18px;
+  }
+
+  .team-card {
+    padding: 16px 12px;
+  }
+
+  /* Quiz layout – яг дэлгэцээрээ багтана */
+  .quiz-layout {
+    grid-template-columns: 1fr;
+    padding: 70px 14px 24px;
+  }
+
+  .quiz-main {
+    height: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .quiz-panel {
+    padding: 14px 12px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  .quiz-title {
+    font-size: 16px;
+  }
+
+  .quiz-question-text {
+    font-size: 14px;
+  }
+
+  .quiz-option-item {
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+
+  .quiz-submit-btn {
+    font-size: 12px;
+    padding: 7px;
+  }
+
+  .quiz-score-text {
+    font-size: 11px;
+    min-width: 70px;
+  }
+
+  /* Mobile filters – бага padding */
+  .quiz-mobile-filters {
+    padding: 12px 10px;
+  }
+
+  .quiz-mobile-field select {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+
+  /* Profile page – бүх зүйл багтдаг байх */
+  .container.profile {
+    flex-direction: column;
+    padding: 70px 14px 24px;
+  }
+
+  .profile-analytics-card {
+    padding: 14px 12px;
+    margin-top: 16px;
+  }
+
+  .profile-analytics-title {
+    font-size: 16px;
+  }
+
+  /* Modal – iPhone дээр дэлгэцнээс хэтэрдэггүй */
+  .modal-box {
+    width: 92%;
+    max-width: 380px;
+    padding: 22px 20px;
+  }
+
+  .auth-form input {
+    padding: 10px 11px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .auth-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Босоо marquee-г утсан дээр бүрэн нууж байна */
+  .vertical-marquee-container {
+    display: none;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL;
+
 const QUIZ_DURATION_SEC = 20 * 60; // 20 минут
 
 export default function QuizPanel({ questions, grade, subject }) {
@@ -91,8 +92,8 @@ export default function QuizPanel({ questions, grade, subject }) {
       timeUsedSec != null
         ? timeUsedSec
         : QUIZ_DURATION_SEC - remainingSec >= 0
-        ? QUIZ_DURATION_SEC - remainingSec
-        : 0;
+          ? QUIZ_DURATION_SEC - remainingSec
+          : 0;
     setTimeUsedSec(used);
 
     // 🔐 Нэвтэрсэн хэрэглэгчийн token байвал серверт хадгална

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import QuizPanel from "./QuizPanel";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_URL;
+
 
 const GRADES = [6, 7, 8, 9, 10, 11, 12];
 const SUBJECTS = [
